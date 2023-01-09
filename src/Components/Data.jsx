@@ -41,7 +41,7 @@ const Data = () => {
       {DataDetails.map((data,index)=>{
         return(
             <div className='flex justify-between items-center'>
-            <div key={index} className='flex pt-2 space-x-3  lg:flex-ro'>
+            <div key={index} className='flex pt-2 space-x-3  lg:flex-row'>
                 <div className='w-[20px] flex justify-start'><img src={data.icon} alt="" /></div>
                 <div className=' '>
                     <p className='ml-0'>{data.text}</p>

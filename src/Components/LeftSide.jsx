@@ -11,7 +11,7 @@ import Navbar from './NavbarMobile'
 const LeftSide = () => {
   return (
     <>
-     <div className='flex flex-col w-leftWidth bg-leftBg hidden md:block'>
+     <div className='flex flex-col mt-0 w-[30%] lg:w-[279px]  border-r-4 border-borderC h-[960px] bg-leftBg hidden md:block'>
         <div className='flex space-x-2 items-center pt-3 pl-3'>
         <img src={logo} alt="" />
         <h1 className='text-lg'>Untitled UI</h1>
@@ -27,6 +27,7 @@ const LeftSide = () => {
         <Footer />
       </div>
      </div>
+    
      <Navbar />
     </> 
   )

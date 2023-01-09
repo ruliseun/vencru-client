@@ -22,7 +22,7 @@ module.exports = {
     }
     },
       width: {
-       leftWidth:'20%',
+       leftWidth:'279px',
        rightWidth:'80%',
        buttonsW:'769px',
        inputW:'500px'
@@ -33,11 +33,12 @@ module.exports = {
        inputH:'300px'
       },
       colors: {
-       rightBg:'#f2f4f7',
+       rightBg:'#f9fafb',
        textP:'gray',
        leftBg:'white',
        carActiveBg:'#f9f5ff',
-       textCol:'red'
+       textCol:'red',
+       borderC:"#eaecf0"
       },
     },
     plugins: [],
