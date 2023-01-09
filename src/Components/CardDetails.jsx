@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import Card from '../Common/Card'
 import visa from './Assets/visa.svg'
 import master from './Assets/master.svg'
+import checked from './Assets/images-gallery/checked.svg'
+
 
 
 const details =[
@@ -32,6 +34,7 @@ const CardDetails = () => {
   const [background, setBackground] = useState(bgWhite);
   const [background1, setBackground1] = useState(bgWhite)
   const [clicked, setClicked] = useState(false)
+  
    const handleClick = (id) => {
     if(clicked === false){
       setClicked(true)
@@ -60,30 +63,32 @@ const CardDetails = () => {
     <div className='flex flex-col lg:flex-row '>
         <div className='flex flex-col w-full mb-2 lg:w-[30%]'>
             <h1>Card details</h1>
-            <p>Select default payment method</p>
+            <p className='text-textP'>Select default payment method</p>
         </div>
 
         <div className='flex flex-col w-full space-y-3 lg:w-[70%]'>
         {details.map((data)=>{
           return(
             <>
-            {data.id === 1 && <div key={data.id} className={`${background} border border-[#d0d5dd]`}>
+            {data.id === 1 && <div key={data.id} className={`${background} border border-[#d0d5dd] w-[100%]`}>
               <div className='flex space-x-3 '>
                 <img src={data.image} alt="card image" className="h-[30px] w-[40px] " />
-                <div className='flex flex-col'>
-                    <p className="">{data.text1}</p>
-                    <p className="">{data.text2}</p>
+                <div className={`${clicked ? 'text-[purple] border-[purple]': 'text-[#101828]'} flex flex-col`}>
+                    <p className="text-[18px] font-medium">{data.text1}</p>
+                    <p className="text-[16px] font-normal">{data.text2}</p>
                   <div className='flex mt-2 space-x-2'>
                     <p>Set as default</p>
                     <Link to='/edit'>Edit</Link>
                   </div>
                 </div>
               </div>
-              <div><input type="checkbox" className='rounded-full' onClick={(e)=>handleClick(data.id)}/></div>
+              <div className={`${clicked ? 'bg-[purple]': 'bg-[white]'}  w-[20px] h-[20px] rounded-full flex items-center justify-center border-2 border-borderC`} onClick={(e)=>handleClick(data.id)}>
+                <img src={checked} className="" />
+              </div>
                
             </div>}
             {data.id ===2 && 
-            <div key={data.id}  className={`${background1} border border-[#d0d5dd]`}>
+            <div key={data.id}  className={`${background1} border border-[#d0d5dd] w-[100%]`}>
               <div className='flex space-x-3 '>
                 <img src={data.image} alt="card image" className="h-[30px] w-[40px] " />
                 <div className='flex flex-col'>
@@ -95,8 +100,11 @@ const CardDetails = () => {
                   </div>
                 </div>
               </div>
-               <div><input type="checkbox" className='rounded-full' onClick={(e)=>handleClick1(data.id)}/></div>
                
+               <div className={`${!clicked ? 'bg-[purple]': 'bg-[white]'}  w-[20px] h-[20px] rounded-full flex items-center justify-center border-2 border-borderC`} onClick={(e)=>handleClick1(data.id)}>
+                <img src={checked} className="" />
+              </div>
+                              
             </div>
             }
             </>

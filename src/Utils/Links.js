@@ -1,6 +1,15 @@
 export const PageLinks =[
    
     {
+        id:1,
+        text:'My details',
+        width: 101,
+        route:'/details',
+       
+        
+    },
+    {
+        id:2,
         text:'Profile',
         width: 75,
         route:'/profile',
@@ -8,6 +17,7 @@ export const PageLinks =[
         
     },
     {
+        id:3,
         text:'Password',
         width: 98,
         route:'/password',
@@ -15,6 +25,7 @@ export const PageLinks =[
         
     },
     {
+        id:4,
         text:'Team',
         width: 69,
         route:'/team',
@@ -22,6 +33,7 @@ export const PageLinks =[
        
     },
     {
+        id:5,
         text:'Plan',
         width: 61,
         route:'/plan',
@@ -29,6 +41,7 @@ export const PageLinks =[
         
     },
     {
+        id:6,
         text:'Billing',
         width: 73,
         route:'/billing',
@@ -36,6 +49,7 @@ export const PageLinks =[
         
     },
     {
+        id:7,
         text:'Notifications',
         width: 118,
         route:'/botifications',
@@ -43,10 +57,19 @@ export const PageLinks =[
         
     },
     {
+        id:8,
         text:'Integrations',
         width: 113,
         route:'/integrations',
         
        
-    }
+    },
+    {
+        id:9,
+        text:'Api',
+        width: 60,
+        route:'/api',
+       
+        
+    },
 ]
